@@ -45,7 +45,7 @@ body {
                             <div class="card-header border-bottom-dashed">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
-                                        <h2>MILLAT MACHINERY & SOLAR AGENCY</h2>
+                                        <h2>DELUXE CABLES QUETTA</h2>
                                     </div>
                                 </div>
                             </div>
