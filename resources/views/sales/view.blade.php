@@ -60,7 +60,7 @@
                                                <tr class="border-1 border-dark">
                                                 <td class="m-1 p-1 border-1 border-dark">{{$key+1}}</td>
                                                 <td class="text-start m-1 p-1 border-1 border-dark">{{$product->product->name}}</td>
-                                                <td class="text-end m-1 p-1 border-1 border-dark">{{number_format($product->qty)}}</td>
+                                                <td class="text-end m-1 p-1 border-1 border-dark">{{number_format($product->qty,2)}}</td>
                                                 <td class="text-end m-1 p-1 border-1 border-dark">{{number_format($product->price, 2)}}</td>
                                                 <td class="text-end m-1 p-1 border-1 border-dark">{{number_format($product->amount, 2)}}</td>
                                                </tr>
