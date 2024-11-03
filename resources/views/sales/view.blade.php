@@ -20,7 +20,7 @@
                                 <div class="col-4"></div>
                                 <div class="col-4 text-center"><h2>SALES INVOICE</h2></div>
                             </div>
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 pb-0 pt-0">
                                 <div class="row g-3">
                                     <div class="col-3">
                                         <p class="text-muted mb-2 text-uppercase fw-semibold">Inv #</p>
@@ -43,7 +43,7 @@
                             <!--end card-body-->
                         </div><!--end col-->
                         <div class="col-lg-12">
-                            <div class="card-body p-4">
+                            <div class="card-body p-4 pb-0 pt-0">
                                 <div class="table-responsive">
                                     <table class="table table-borderless text-center table-nowrap align-middle mb-0">
                                         <thead>
@@ -55,7 +55,7 @@
                                                 <th scope="col" class="text-end">Amount</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="products-list">
+                                        <tbody id="products-list" style="font-weight: bolder">
                                            @foreach ($sale->details as $key => $product)
                                                <tr class="border-1 border-dark">
                                                 <td class="m-1 p-1 border-1 border-dark">{{$key+1}}</td>
@@ -66,7 +66,7 @@
                                                </tr>
                                            @endforeach
                                         </tbody>
-                                        <tfoot>
+                                        <tfoot style="font-weight: bolder">
                                             @php
                                                 $due = $sale->total - $sale->payments->sum('amount');
                                                 $paid = $sale->payments->sum('amount');
