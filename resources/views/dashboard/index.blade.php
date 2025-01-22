@@ -18,7 +18,7 @@
                                     <i class="ri-space-ship-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22"><span class="counter-value" data-target="{{totalPurchases()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22"><span class="counter-value">{{number_format(totalPurchases(), 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                                     <i class="ri-exchange-dollar-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22"><span class="counter-value" data-target="{{totalSales()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22"><span class="counter-value">{{number_format(totalSales(), 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                                     <i class="ri-pulse-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22 {{$customersBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value" data-target="{{customerBalance()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22 {{$customersBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value" >{{number_format($customersBalance, 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     <i class="ri-trophy-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22 {{$vendorsBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value" data-target="{{vendorBalance()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22 {{$vendorsBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value">{{number_format($vendorsBalance, 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <i class="ri-service-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22 {{$myBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value" data-target="{{myBalance()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22 {{$myBalance < 0 ? "text-danger" : "text-success"}}"><span class="counter-value" >{{number_format($myBalance, 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                     <i class="ri-service-line display-6 text-muted cfs-22"></i>
                                 </div> --}}
                                 <div class="flex-grow-1 ms-3">
-                                    <h2 class="mb-0 cfs-22 "><span class="counter-value" data-target="{{stockValue()}}">0</span></h2>
+                                    <h2 class="mb-0 cfs-22"><span class="counter-value" >{{number_format(stockValue(), 0)}}</span></h2>
                                 </div>
                             </div>
                         </div>
