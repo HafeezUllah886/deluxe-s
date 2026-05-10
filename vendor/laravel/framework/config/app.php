@@ -90,22 +90,20 @@ return [
     'domains' => [
         'deluxe.test',
         'deluxe-s.test',
-        'deluxe.diamondquetta.com',
-        'testmillat.diamondquetta.com',
+        'test.nexgenpakistan.com',
+        'millat.nexgenpakistan.com',
         'deluxe.run',
     ],
 
     'databases' => [
-        'deluxe',
+        'millat',
         'test',
     ],
 
-    'files' =>
-    [
-        '428030',
-        '87079'
+    'files' => [
+        '102400',
+        '100193',
     ],
-
 
     /*
     |--------------------------------------------------------------------------
