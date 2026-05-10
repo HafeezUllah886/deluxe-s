@@ -2,21 +2,21 @@
     <!-- LOGO -->
     <div class="navbar-brand-box">
         <!-- Dark Logo-->
-        <a href="{{route('dashboard')}}" class="logo logo-dark">
+        <a href="{{ route('dashboard') }}" class="logo logo-dark">
             <span class="logo-sm">
-                <h3 class="text-white">DC</h3>
+                <h3 class="text-white">{{ projectNameShort() }}</h3>
             </span>
             <span class="logo-lg">
-                <h3 class="text-white mt-3">DELUXE CABLE</h3>
+                <h3 class="text-white mt-3">{{ projectNameHeader() }}</h3>
             </span>
         </a>
         <!-- Light Logo-->
-        <a href="{{route('dashboard')}}" class="logo logo-light">
+        <a href="{{ route('dashboard') }}" class="logo logo-light">
             <span class="logo-sm">
-                <h3 class="text-white">DC</h3>
+                <h3 class="text-white">{{ projectNameShort() }}</h3>
             </span>
             <span class="logo-lg">
-                <h3 class="text-white mt-3">DELUXE CABLE</h3>
+                <h3 class="text-white mt-3">{{ projectNameHeader() }}</h3>
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -73,7 +73,8 @@
                                     data-key="t-chat">Create Sale</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('sale.index') }}" class="nav-link" data-key="t-chat"> Sales History</a>
+                                <a href="{{ route('sale.index') }}" class="nav-link" data-key="t-chat"> Sales
+                                    History</a>
                             </li>
                         </ul>
                     </div>
@@ -90,7 +91,8 @@
                                     data-key="t-chat">Create Quotation</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('quotation.index') }}" class="nav-link" data-key="t-chat"> Quotation History</a>
+                                <a href="{{ route('quotation.index') }}" class="nav-link" data-key="t-chat"> Quotation
+                                    History</a>
                             </li>
                         </ul>
                     </div>
@@ -121,19 +123,24 @@
                     <div class="collapse menu-dropdown" id="stock">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('product_stock.index', ['zero' => 'not_allowed']) }}" class="nav-link" data-key="t-chat">Stock</a>
+                                <a href="{{ route('product_stock.index', ['zero' => 'not_allowed']) }}"
+                                    class="nav-link" data-key="t-chat">Stock</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('product_stock.index', ['zero' => 'allowed']) }}" class="nav-link" data-key="t-chat">Stock with Zero</a>
+                                <a href="{{ route('product_stock.index', ['zero' => 'allowed']) }}" class="nav-link"
+                                    data-key="t-chat">Stock with Zero</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('product_stock.index', ['zero' => 'above_zero']) }}" class="nav-link" data-key="t-chat">Stock Above Zero</a>
+                                <a href="{{ route('product_stock.index', ['zero' => 'above_zero']) }}"
+                                    class="nav-link" data-key="t-chat">Stock Above Zero</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('product_stock.index', ['zero' => 'below_zero']) }}" class="nav-link" data-key="t-chat">Stock Below Zero</a>
+                                <a href="{{ route('product_stock.index', ['zero' => 'below_zero']) }}"
+                                    class="nav-link" data-key="t-chat">Stock Below Zero</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('stockTransfer.index') }}" class="nav-link" data-key="t-chat">Stock Transfer</a>
+                                <a href="{{ route('stockTransfer.index') }}" class="nav-link"
+                                    data-key="t-chat">Stock Transfer</a>
                             </li>
                         </ul>
                     </div>
@@ -150,10 +157,11 @@
                                     List </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('categories.index') }}" class="nav-link" data-key="t-chat">Products
+                                <a href="{{ route('categories.index') }}" class="nav-link"
+                                    data-key="t-chat">Products
                                     Categories </a>
                             </li>
-                           {{--  <li class="nav-item">
+                            {{--  <li class="nav-item">
                                 <a href="{{ route('units.index') }}" class="nav-link" data-key="t-chat"> Units </a>
                             </li> --}}
                         </ul>
@@ -226,7 +234,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{route('todos.index')}}">
+                    <a class="nav-link menu-link" href="{{ route('todos.index') }}">
                         <i class="ri-apps-2-line"></i> <span data-key="t-apps">Todos</span>
                     </a>
                 </li>
@@ -238,7 +246,8 @@
                     <div class="collapse menu-dropdown" id="warehouses">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{ route('warehouses.index') }}" class="nav-link" data-key="t-chat">Warehouses
+                                <a href="{{ route('warehouses.index') }}" class="nav-link"
+                                    data-key="t-chat">Warehouses
                                     List </a>
                             </li>
                         </ul>

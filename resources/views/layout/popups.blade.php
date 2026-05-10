@@ -64,61 +64,58 @@
 
     <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
     @if (Session::get('success'))
-    <script>
-       Toastify({
-        text: "{{Session::get('success')}}",
-        className: "info",
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: "linear-gradient(to right, #01CB3E, #96c93d)",
-        }
-        }).showToast();
-    </script>
-@endif
-@if (Session::get('error'))
-    <script>
-         Toastify({
-        text: "{{Session::get('error')}}",
-        className: "info",
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: "linear-gradient(to right, #FF5733, #E70000)",
-        }
-        }).showToast();
-    </script>
+        <script>
+            Toastify({
+                text: "{{ Session::get('success') }}",
+                className: "info",
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #01CB3E, #96c93d)",
+                }
+            }).showToast();
+        </script>
+    @endif
+    @if (Session::get('error'))
+        <script>
+            Toastify({
+                text: "{{ Session::get('error') }}",
+                className: "info",
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #FF5733, #E70000)",
+                }
+            }).showToast();
+        </script>
     @endif
     @yield('page-js')
     <script>
         let timeout;
-        $(".no_zero").on("input", function (){
-            clearTimeout(timeout);  // Clear any previous timeout to avoid multiple triggers
-    var $this = $(this);
+        $(".no_zero").on("input", function() {
+            clearTimeout(timeout); // Clear any previous timeout to avoid multiple triggers
+            var $this = $(this);
 
-    timeout = setTimeout(function() {
-        if ($this.val() === '') {
-            $this.val(0);
-            updateTotal();
-        }
-    }, 1000);  // 1000ms = 1 second
-    });
+            timeout = setTimeout(function() {
+                if ($this.val() === '') {
+                    $this.val(0);
+                    updateTotal();
+                }
+            }, 1000); // 1000ms = 1 second
+        });
 
-    $("#status1").on("change", function(){
-        var status = $(this).find(":selected").val();
-        if(status == "partial")
-        {
-            $(".paid").removeClass("d-none");
-        }
-        else
-        {
-            $(".paid").addClass("d-none");
-        }
-    });
+        $("#status1").on("change", function() {
+            var status = $(this).find(":selected").val();
+            if (status == "partial") {
+                $(".paid").removeClass("d-none");
+            } else {
+                $(".paid").addClass("d-none");
+            }
+        });
     </script>
 </body>
 
